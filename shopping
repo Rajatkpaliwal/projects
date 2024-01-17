@@ -89,7 +89,7 @@ float onlineshopping(){
         }
     }
 /*-------------------LAPTOP-------------------------*/
-    if(choice=='l' || choice=='L'){
+    else if(choice=='l' || choice=='L'){
         Laptoplevel :
         cout<<" laptop details "<<endl;
         cout<<" (1) hp chromebook => price: 32900 INR "<<endl;
@@ -132,7 +132,7 @@ float onlineshopping(){
 
     /*----------------------------desktops--------------------*/
     
-    if(choice=='d' || choice=='D'){
+    else if(choice=='d' || choice=='D'){
         desktoplevel :
         cout<<" laptop details "<<endl;
         cout<<" (1) windows 8.1 => price: 32900 INR "<<endl;
@@ -169,7 +169,7 @@ float onlineshopping(){
 
     /*----------------------------WATCH--------------------*/
     
-    if(choice=='w' || choice=='W'){
+    else if(choice=='w' || choice=='W'){
         watchlevel :
         cout<<" laptop details "<<endl;
         cout<<" (1) Google Pixel Watch 2 => price: 32900 INR "<<endl;                       
@@ -188,7 +188,7 @@ float onlineshopping(){
 
     /*----------------------------headphones--------------------*/
     
-    if(choice=='h' || choice=='H'){
+    else if(choice=='h' || choice=='H'){
         headphonelevel :
         cout<<" laptop details "<<endl;
         cout<<" (1) Pixel Buds Pro => price: 32900 INR "<<endl;
