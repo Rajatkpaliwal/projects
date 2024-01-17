@@ -1,0 +1,218 @@
+# include<iostream>
+using namespace std;
+int main(){
+    char startvalue;
+    char choiceAgain;
+    float onlineshopping(void);
+    startLevel :
+    cout<<"please press s to start shopping "<<endl;
+    start :
+    cin>>startvalue;
+    if ( startvalue=='s' || startvalue== 'S'){
+        float totalamount=onlineshopping();
+        cout<<"Total Bill amount is "<< totalamount <<endl;;
+        shopAgain :
+        cout<<"Do you want to shopping again , Y or N"<<endl;
+        cin>>choiceAgain;
+        if( choiceAgain=='y' || choiceAgain=='Y'){
+            goto startLevel;
+        }
+        else if( choiceAgain=='n' || choiceAgain=='N'){
+            cout<< "thanks for shopping "<< endl;  
+        }
+        else{
+            cout << "you have entered wrong option,  please type again"<< endl;
+            goto shopAgain;
+        } 
+    }
+    else{
+        cout<<"you have entered wrong option , please s"<<endl;
+        goto start;
+    }
+    return 0;
+}
+
+float onlineshopping(){
+    char choice;
+    char item;
+    float billamount = 0;    
+    int quantity;
+    startitemlevel :
+    cout<<" *****************welcome to online shopping***************** "<<endl;
+    cout<<" ----------- please follow the instruction----------------"<<endl;
+    cout<<"(1) please enter m to order mobile phones "<<endl; 
+    cout<<"(2) please enter l to order laptop "<<endl;  
+    cout<<"(3) please enter d to order desktops "<<endl;  
+    cout<<"(4) please enter w to order Watch "<<endl;
+    cout<<"(5) please enter h to order headphones "<<endl;
+    cin>>choice;
+
+    /* -------------------mobile------------------------*/
+    if(choice=='m' || choice=='M'){
+        mobilelevel :
+        cout<<" Mobile details "<<endl;
+        cout<<" (1) pixel 8 pro => price: 40000 INR "<<endl;
+        cout<<" (2) pixel 8  => price: 35000 INR "<<endl;
+        cout<<" (3) pixel 7 pro => price: 30000 INR "<<endl;
+        cout<<" (4) pixel 7 a => price: 25000 INR "<<endl;
+        cout<<" (5) pixel 7 => price: 20000 INR "<<endl;
+        cout<< " please enter your choice"<< endl;
+        cin>>item;
+        if( item == '1'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*40000;
+        }
+        else if( item == '2'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*35000;
+        }
+        else if( item == '3'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*30000;
+        }        
+        else if( item == '4'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*25000;
+        }
+        else if( item == '5'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*20000;
+        }
+        else{
+            cout<<"you have entered wrong option , please try again "<<endl;
+            goto mobilelevel;   
+        }
+    }
+/*-------------------LAPTOP-------------------------*/
+    else if(choice=='l' || choice=='L'){
+        Laptoplevel :
+        cout<<" laptop details "<<endl;
+        cout<<" (1) hp chromebook => price: 32900 INR "<<endl;
+        cout<<" (2) vivobook  => price: 59800 INR "<<endl;
+        cout<<" (3) hp victus => price: 87900 INR "<<endl;
+        cout<<" (4) mac book => price: 125000 INR "<<endl;
+        cout<<" (5) asus Tuf => price: 120000 INR "<<endl;
+        cout<< " please enter your choice"<< endl;
+        cin>>item;
+        if( item == '1'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*32900;
+        }
+        else if( item == '2'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*59800;
+        }
+        else if( item == '3'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*87900;
+        }
+        else if( item == '4'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*125000;
+        }
+        else if( item == '5'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*120000;
+        }        
+        else{
+            cout<<"you have entered wrong option , please try again "<<endl;
+            goto Laptoplevel;   
+        }
+    }
+
+    /*----------------------------desktops--------------------*/
+    
+    else if(choice=='d' || choice=='D'){
+        desktoplevel :
+        cout<<" laptop details "<<endl;
+        cout<<" (1) windows 8.1 => price: 32900 INR "<<endl;
+        cout<<" (2) windows 10  => price: 59800 INR "<<endl;
+        cout<<" (3) windows 11 => price: 87900 INR "<<endl;
+        cout<<" (4) windows 7 => price: 125000 INR "<<endl;        
+        cout<< " please enter your choice"<< endl;
+        cin>>item;
+        if( item == '1'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*32900;
+        }
+        else if( item == '2'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*59800;
+        }
+        else if( item == '3'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*87900;
+        }
+        else if( item == '4'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*125000;
+        }               
+        else{
+            cout<<"you have entered wrong option , please try again "<<endl;
+            goto desktoplevel;   
+        }
+    }
+
+    /*----------------------------WATCH--------------------*/
+    
+    else if(choice=='w' || choice=='W'){
+        watchlevel :
+        cout<<" laptop details "<<endl;
+        cout<<" (1) Google Pixel Watch 2 => price: 32900 INR "<<endl;                       
+        cout<< " please enter your choice"<< endl;
+        cin>>item;
+        if( item == '1'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*32900;
+        }        
+        else{
+            cout<<"you have entered wrong option , please try again "<<endl;
+            goto watchlevel;   
+        }
+    }
+
+    /*----------------------------headphones--------------------*/
+    
+    else if(choice=='h' || choice=='H'){
+        headphonelevel :
+        cout<<" laptop details "<<endl;
+        cout<<" (1) Pixel Buds Pro => price: 32900 INR "<<endl;
+        cout<<" (2) Pixel Buds A-Series => price: 59800 INR "<<endl;               
+        cout<< " please enter your choice"<< endl;
+        cin>>item;
+        if( item == '1'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*32900;
+        }
+        else if( item == '2'){
+            cout<<"enter quantity"<<endl;
+            cin>>quantity;
+            billamount = billamount + quantity*59800;
+        }        
+        else{
+            cout<<"you have entered wrong option , please try again "<<endl;
+            goto headphonelevel;   
+        }
+    }
+else{
+    cout<<"you have entered wrong option , please try again "<<endl;
+    goto startitemlevel;   
+    }
+    return billamount;   
+}
